@@ -1,0 +1,6 @@
+JS compiler
+Transpile modern JS down so they run on all browers
+Transpile jsx to js; jsx is not valid javascript.  Transpiles react jsx down to js 
+
+configured in package.json; can be configured via .babelrc
+tells babel to transpile jxs and modern js features to js
