@@ -2,7 +2,10 @@
   "name": "ps-redux",
   "description": "React and Redux Pluralsight course by Cory House",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.dev.js --port 3000"
+    "start": "run-p start:dev start:api",
+    "start:dev": "webpack-dev-server --config webpack.config.dev.js --port 3000",
+    "prestart:api": "node tools/createMockDb.js",
+    "start:api": "node tools/apiServer.js"
   },
   "dependencies": {
     "bootstrap": "4.3.1",
@@ -29,7 +32,7 @@
     "eslint": "5.15.2",
     "eslint-loader": "2.1.2",
     "eslint-plugin-import": "2.16.0",
-    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react": "7.12.4",
     "fetch-mock": "7.3.1",
     "html-webpack-plugin": "3.2.0",
     "http-server": "0.11.1",
